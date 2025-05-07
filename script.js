@@ -1,8 +1,21 @@
 function RealParaDolar(valorConverter, valorCotacao) {
+    // const cotacao = 5.76;
+    // valorConvertido = (valorConverter / cotacao).toFixed(2);
     let valorConvertido;
     valorConvertido = (valorConverter / valorCotacao).toFixed(2);
 
-    return valorConvertido;
+    return "U$" + valorConvertido;
+
+}
+
+function RealParaEuro(valorConverter, valorCotacao) {
+    // const cotacao = 6.52;
+    let valorConvertido;
+    valorConvertido = (valorConverter / valorCotacao).toFixed(2);
+
+    return valorConvertido
+
+    // return `€ ${valorConvertido}`;
 
 }
 
@@ -23,11 +36,13 @@ function main() {
         if (opcaoMoeda == 1) {
             cotacaoMoeda = prompt("Digite a cotação do dólar:");
             simboloMoeda = "U$";
+            valorConvertido = RealParaDolar(valorConverter, cotacaoMoeda); //se for definir a cotação fixa posso tirar a cotacaoMoeda daqui
         } else {
             cotacaoMoeda = prompt("Digite a cotação do euro:");
             simboloMoeda = "€";
+            valorConvertido = RealParaEuro(valorConverter, cotacaoMoeda); //se for definir a cotação fixa posso tirar a cotacaoMoeda daqui
         }
-        valorConvertido = RealParaDolar(valorConverter, cotacaoMoeda);
+        
         alert(
             "O valor convertido para " +
             simboloMoeda +
