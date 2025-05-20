@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real</title>
-    <script src="./script.js"></script>
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    
+
+    <img src="./image/money dollar.gif" alt="money" class="imagem-topo">
+
+    <h1>Conversor de moedas</h1>
+    <p>Olá, Qual conversão você deseja realizar hoje?</p>
+
+    <form id="formConversao">
+        <input type="number" id="valor" placeholder="Digite o valor que deseja converter: (em R$)" required>
+
+        <select id="moeda" required>
+            <option value="">Selecione a Moeda</option>
+            <option value="dolar">Dólar</option>
+            <option value="euro">Euro</option>
+        </select>
+
+        <button type="submit">Converter</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="./js/scriptDOM.js"></script>
 </body>
 </html>
